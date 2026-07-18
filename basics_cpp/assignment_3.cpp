@@ -3,51 +3,51 @@ using namespace std;
 
 // Q1: What’ll be the output of the following programs:
 
-// int main()
-// {
-//      int x = 2, y = 5;
+int main()
+{
+     int x = 2, y = 5;
 
-//      int exp1 = (x * y / 5);
-//      int exp2 = (x * (y / 5));
+     int exp1 = (x * y / 5);
+     int exp2 = (x * (y / 5));
 
-//      cout << exp1 << "\n"; // 2
-//      cout << exp2;         // 2
-//      return 0;
-// }
+     cout << exp1 << "\n"; // 2
+     cout << exp2;         // 2
+     return 0;
+}
 
-// int main()
-// {
-//      int x = 10, y = 5;
-//      int exp1 = (y * (x / y + x / y));
-//      int exp2 = (y * x / y + y * x / y);
+int main()
+{
+     int x = 10, y = 5;
+     int exp1 = (y * (x / y + x / y));
+     int exp2 = (y * x / y + y * x / y);
 
-//      cout << exp1 << "\n"; // 20
-//      cout << exp2;         // 20
-//      return 0;
-// }
+     cout << exp1 << "\n"; // 20
+     cout << exp2;         // 20
+     return 0;
+}
 
-// int main()
-// {
-//      int x = 200, y = 50, z = 100;
+int main()
+{
+     int x = 200, y = 50, z = 100;
 
-//      if (x > y && y > z)
-//      {
-//           cout << "hello \n";
-//      }
+     if (x > y && y > z)
+     {
+          cout << "hello \n";
+     }
 
-//      if (z > y && z < x)
-//      {
-//           cout << "c++ \n";
-//      }
+     if (z > y && z < x)
+     {
+          cout << "c++ \n";
+     }
 
-//      if ((y + 200) < x && (y + 150) < z)
-//      {
-//           cout << "Hello C++ \n";
-//      }
+     if ((y + 200) < x && (y + 150) < z)
+     {
+          cout << "Hello C++ \n";
+     }
 
-//      // c++
-//      return 0;
-// }
+     // c++
+     return 0;
+}
 
 // Q2: Read up about Operator Precedence.
 
