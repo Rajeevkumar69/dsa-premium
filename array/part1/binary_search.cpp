@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 
-int binarySearch(int arr[], int n, int key)
+int binarySearch(int *arr, int n, int key)
 {
      int st = 0, end = n - 1;
      while (st <= end)
