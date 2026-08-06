@@ -1,26 +1,18 @@
 #include <iostream>
-#include <vector>
 #include <algorithm>
 using namespace std;
 
-int main()
+int binarySearch(int arr[], int n, int key)
 {
-     vector<int> arr = {2, 4, 6, 8, 10, 12, 16};
-     int target = 122;
-
-     sort(arr.begin(), arr.end());
-     int st = 0, end = arr.size() - 1;
-
+     int st = 0, end = n - 1;
      while (st <= end)
      {
           int mid = st + (end - st) / 2;
-
-          if (arr[mid] == target)
+          if (arr[mid] == key)
           {
-               cout << mid;
-               return 0;
+               return mid;
           }
-          else if (arr[mid] < target)
+          else if (arr[mid] < key)
           {
                st = mid + 1;
           }
@@ -29,6 +21,16 @@ int main()
                end = mid - 1;
           }
      }
-     cout << -1;
+     return -1;
+}
+
+int main()
+{
+     int arr[] = {4, 5, 6, 8, 9, 12};
+
+     int target = 12;
+     int n = sizeof(arr) / sizeof(int);
+
+     cout << binarySearch(arr, n, target);
      return 0;
 }
