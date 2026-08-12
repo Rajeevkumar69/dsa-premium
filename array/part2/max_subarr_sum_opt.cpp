@@ -21,7 +21,7 @@ void findMaxSubArrSum(int *arr, int n)
 
 int main()
 {
-     int arr[] = {2, -6, 5, 4, -3, 7};
+     int arr[] = {2, -3, 6, -5, 4, 2};
 
      int size = sizeof(arr) / sizeof(int);
 
