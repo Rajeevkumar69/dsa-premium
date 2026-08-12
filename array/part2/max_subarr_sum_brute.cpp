@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+/*
+TC:- O(n*n*n)
+*/
+
 void printMaxSubarrSum(int *arr, int n)
 {
      int maxSum = INT_MIN;
