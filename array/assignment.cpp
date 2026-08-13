@@ -13,20 +13,20 @@ nums=[1,1,1,3,3,4,3,2,4,2]
 true
 */
 
-// bool checkOccurance(int *arr, int n)
-// {
-//      for (int i = 0; i < n; i++)
-//      {
-//           for (int j = i + 1; j < n; j++)
-//           {
-//                if (arr[i] == arr[j])
-//                {
-//                     return true;
-//                }
-//           }
-//      }
-//      return false;
-// }
+bool checkOccurance(int *arr, int n)
+{
+     for (int i = 0; i < n; i++)
+     {
+          for (int j = i + 1; j < n; j++)
+          {
+               if (arr[i] == arr[j])
+               {
+                    return true;
+               }
+          }
+     }
+     return false;
+}
 
 /*
 Q2:
