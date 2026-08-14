@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 /*
@@ -15,6 +17,7 @@ true
 
 bool checkOccurance(int *arr, int n)
 {
+     // TC:- O(n*n)
      for (int i = 0; i < n; i++)
      {
           for (int j = i + 1; j < n; j++)
@@ -23,6 +26,21 @@ bool checkOccurance(int *arr, int n)
                {
                     return true;
                }
+          }
+     }
+     return false;
+}
+
+bool checkDuplicate(vector<int> &nums, int n)
+{
+     // TC:- O(n)
+     sort(nums.begin(), nums.end());
+
+     for (int i = 0; i < n; i++)
+     {
+          if (nums[i - 1] == nums[i])
+          {
+               return true;
           }
      }
      return false;
@@ -79,15 +97,43 @@ int findTarget(int *nums, int n, int target)
      return -1;
 }
 
+/*
+(MEDIUM)
+Q3: Given an integer array nums, find a subarray that has the largest product,
+and return the product.
+
+nums=[2,3,-2,4]
+6
+Explanation:[2,3] has the largest product 6.
+*/
+
+int calculateProduct(int *nums, int n)
+{
+     int maxProd = INT_MIN;
+     for (int i = 0; i < n; i++)
+     {
+          int currProd = 1;
+          for (int j = i; j < n; j++)
+          {
+               currProd *= nums[j];
+               maxProd = max(maxProd, currProd);
+          }
+     }
+     return maxProd;
+}
+
 int main()
 {
-     int nums[] = {4, 5, 6, 7, 0, 1, 2};
+     int nums[] = {-2, 0, -1};
      int n = sizeof(nums) / sizeof(int);
 
      // bool result = checkOccurance(nums, n);
      // cout << result;
 
-     int result = findTarget(nums, n, 0);
+     // int result = findTarget(nums, n, 0);
+     // cout << result;
+
+     int result = calculateProduct(nums, n);
      cout << result;
      return 0;
 }
