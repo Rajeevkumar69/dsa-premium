@@ -73,3 +73,42 @@ for(int i = 1; i < n; i++){
      nums[prev + 1] = curr;
 }
 ```
+
+# Counting Sort
+
+* In this sorting algorithm, count how many times each element occurs using a frequency array.
+First find the minimum and maximum value from the array.
+
+* Then create a freq array where freq[value] stores the number of times that value occurs.
+
+* Traverse the freq array from minValue to maxVal.
+If freq[i] > 0, put i into the original array that many times.
+
+* Counting Sort works best when the range of values is not very large.
+
+code
+```
+vector<int> countingSort(vector<int> &nums, int n)
+{
+     int freq[100000] = {0};
+     int minValue = INT_MAX, maxVal = INT_MIN;
+
+     for(int i = 0; i < n; i++){
+          minValue = min(minValue, nums[i]);
+          maxVal = max(maxVal, nums[i]);
+     }
+
+     for(int i = 0; i < n; i++){
+          freq[nums[i]]++;
+     }
+
+     for(int i = minValue, j = 0; i <= maxVal; i++){
+          while(freq[i] > 0){
+               nums[j++] = i;
+               freq[i]--;
+          }
+     }
+
+     return nums;
+}
+```
