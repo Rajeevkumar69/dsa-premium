@@ -112,3 +112,17 @@ vector<int> countingSort(vector<int> &nums, int n)
      return nums;
 }
 ```
+
+# In-built Sort
+
+* sort() is an inbuilt, highly optimized function defined in the <algorithm> header file.
+
+* Bydefault sort() arrange the element in ascending order
+
+* Its TC is `O(n log n)` which is mostly optimized for sorting.
+
+
+code
+```
+sort(arr.begin(), arr.end());
+```
