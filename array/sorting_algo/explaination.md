@@ -46,3 +46,30 @@ for(int i=0; i<n; i++){
      swap(nums[i], nums[minIdx]);
 }
 ```
+
+# Insertion Sort
+
+* In this sorting algorithm, pick one element and insert it into its correct position among the previous sorted elements.
+
+* The outer loop starts from 1 to n-1, as we consider the first element already sorted.
+
+* Take curr = nums[i] and prev = i-1.
+If nums[prev] > curr, shift/swap the previous element to the right and decrement prev.
+
+* Continue until the correct position for curr is found.
+Finally, place curr at prev + 1.
+
+code
+```
+for(int i = 1; i < n; i++){
+     int curr = nums[i];
+     int prev = i - 1;
+
+     while(prev >= 0 && nums[prev] > curr){
+          swap(nums[prev], nums[prev + 1]);
+          prev--;
+     }
+
+     nums[prev + 1] = curr;
+}
+```
