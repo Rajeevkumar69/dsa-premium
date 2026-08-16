@@ -64,6 +64,37 @@ vector<int> insertionSort(vector<int> &nums, int n)
      return nums;
 }
 
+/*Q4: Use the Counting sort algorithm to sort the
+array in descending order
+*/
+
+vector<int> countingSort(vector<int> &nums, int n)
+{
+     int freq[100000] = {0};
+     int minVal = INT_MAX, maxVal = INT_MIN;
+
+     for (int i = 0; i < n; i++)
+     {
+          minVal = min(minVal, nums[i]);
+          maxVal = max(maxVal, nums[i]);
+     }
+
+     for (int i = 0; i < n; i++)
+     {
+          freq[nums[i]]++;
+     }
+
+     for (int i = minVal, j = 0; i <= maxVal; i++)
+     {
+          while (freq[i] < 0)
+          {
+               nums[j++] = i;
+               freq[i]--;
+          }
+     }
+     return nums;
+}
+
 int main()
 {
      vector<int> arr = {3, 6, 2, 1, 8, 7, 4, 5, 3, 1};
@@ -90,11 +121,11 @@ int main()
      }
      cout << "\n";
 
-     // vector<int> result4 = countingSort(arr, n);
-     // for (int val : result4)
-     // {
-     //      cout << val << " ";
-     // }
+     vector<int> result4 = countingSort(arr, n);
+     for (int val : result4)
+     {
+          cout << val << " ";
+     }
 
      return 0;
 }
