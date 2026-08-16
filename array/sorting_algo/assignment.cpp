@@ -44,6 +44,26 @@ vector<int> selectionSort(vector<int> &nums, int n)
      return nums;
 }
 
+/*Q3: Use the Insertion sort algorithm to sort the
+array in descending order
+*/
+
+vector<int> insertionSort(vector<int> &nums, int n)
+{
+     for (int i = 1; i < n - 1; i++)
+     {
+          int curr = nums[i], prev = i - 1;
+
+          if (nums[prev] > curr)
+          {
+               swap(curr, prev);
+               prev--;
+          }
+          curr = prev + 1;
+     }
+     return nums;
+}
+
 int main()
 {
      vector<int> arr = {3, 6, 2, 1, 8, 7, 4, 5, 3, 1};
