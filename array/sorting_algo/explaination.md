@@ -1,11 +1,10 @@
 ## Bubble Sort
 
-* Its basically the pick one largest element & swap it from the 
-smallest element in the array.
+* Its basically the pick one largest element & swap it from the smallest element in the array.
 
-* So for this you can pick the 1st element from array & 
-check/compare with the next element & if found < then swap
-& at the last return the array.
+* So for this you can pick the 1st element from array & check/compare with the next element & if found < then swap & at the last return the array.
+
+* For Outer loop pick the 0th index till n-1 & For inner loop pick the 0th index & till n-i-1 times.
 
 * So for this outer loop will run till `n-1` & inner loop 
 will run `n-i-1` times. 
