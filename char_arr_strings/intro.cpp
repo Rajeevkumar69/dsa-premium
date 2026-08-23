@@ -18,5 +18,10 @@ int main()
      cout << work4;
 
      cout << strlen(work);
+
+     char name[50];
+     cout << "\n Enter your name: ";
+     cin >> name;
+     cout << name;
      return 0;
 }
