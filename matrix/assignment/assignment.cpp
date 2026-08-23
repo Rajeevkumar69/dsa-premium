@@ -44,14 +44,34 @@ int returnSum(int mat[][3], int n, int m)
      return sum;
 }
 
+void flattenMatrix(int mat[][3], int n, int m)
+{
+     for (int i = 0; i < n; i++)
+     {
+          for (int j = 0; j < m; j++)
+          {
+               if (i == j)
+               {
+                    swap(mat[i][j], mat[i][j]);
+               }
+               else
+               {
+                    swap(mat[i][j], mat[j][i]);
+               }
+                    }
+     }
+}
+
 int main()
 {
-     int arr[3][3] = {{1, 4, 9}, {11, 4, 3}, {12, 2, 3}};
+     int arr[3][3] = {{11, 12, 13}, {21, 22, 23}};
      int n = 3, m = 3;
 
      // int result = countOccurance(arr, n, m, 7);
-     int result = returnSum(arr, n, m);
+     // int result = returnSum(arr, n, m);
 
-     cout << result;
+     // cout << result;
+
+     flattenMatrix(arr, n, m);
      return 0;
 }
