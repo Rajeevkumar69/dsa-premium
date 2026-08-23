@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 int main()
@@ -15,5 +16,7 @@ int main()
 
      char work4[50] = {'c', 'o', 'd', 'e', '\0'};
      cout << work4;
+
+     cout << strlen(work);
      return 0;
 }
