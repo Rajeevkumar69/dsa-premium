@@ -23,5 +23,13 @@ int main()
      cout << "\n Enter your name: ";
      cin >> name;
      cout << name;
+
+     cout << "\n";
+     char sentence[30];
+
+     cout << "Enter sentence:\n";
+     cin.getline(sentence, 30);
+
+     cout << sentence;
      return 0;
 }
