@@ -20,11 +20,34 @@ void toUpper(char arr[], int n)
      cout << arr;
 }
 
+void toLower(char arr[], int n)
+{
+     for (int i = 0; i < n; i++)
+     {
+
+          char ch = arr[i];
+
+          if (ch >= 'a' && ch <= 'z')
+          {
+               continue;
+          }
+          else
+          {
+               arr[i] = ch - 'A' + 'a';
+          }
+     }
+     cout << arr;
+}
+
 int main()
 {
      char arr[] = "aPpLe";
 
      toUpper(arr, strlen(arr));
+
+     cout << "\n";
+
+     toLower(arr, strlen(arr));
 
      return 0;
 }
