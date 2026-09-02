@@ -15,15 +15,14 @@ vector<int> vec(5, -1)
 
 ### Functions You MUST Remember
 
-Function	Meaning
-v.size()	Number of elements
-v.empty()	Is vector empty?
-v.front()	First element
-v.back()	Last element
-v.clear()	Remove all elements
-v.capacity()	Current allocated capacity
-
-
+| Function | Meaning |
+|---|---|
+| `v.size()` | Number of elements |
+| `v.empty()` | Is vector empty? |
+| `v.front()` | First element |
+| `v.back()` | Last element |
+| `v.clear()` | Remove all elements |
+| `v.capacity()` | Current allocated capacity |
 #### Add Element in a Vector
 
 v.push_back(10);
