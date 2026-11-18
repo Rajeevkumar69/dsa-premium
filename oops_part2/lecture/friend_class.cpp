@@ -12,6 +12,7 @@ class A
 private:
      string secret = "Secret Data....";
      friend class B;
+     friend void revelSecret(A &obj);
 };
 
 class B
@@ -23,6 +24,11 @@ public:
      }
 };
 
+void revelSecret(A &obj)
+{
+     cout << obj.secret << endl;
+}
+
 int main()
 {
 
@@ -30,5 +36,6 @@ int main()
      B b1;
 
      b1.getASecret(a1);
+     revelSecret(a1);
      return 0;
 }
